@@ -11,6 +11,7 @@ jobs:
         with:
           distribution: "zulu"
           java-version: "17"
+      - run: java -cp java HelloWorldApp
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.1
         with:
