@@ -34,12 +34,17 @@ jobs:
         run: |
           git config --global user.email "3160479057qq@gmail.com"
           git config --global user.name "Your Name"
-      - name: bulid make 0
-        run: |
-          cd ~/android/pe
-          repo init -u https://github.com/PixelExperience/manifest -b twelve
       - name: Start SSH via tmate
         uses: P3TERX/ssh2actions@main
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - name: Pull source code
+        run: |
+          cd ~/android/pe
+          repo sync -j$(nproc --all) -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+      - name: 
+        run: |
+          cd ~/android/pe
+          croot
+          mka bacon -j$(nproc --all)
