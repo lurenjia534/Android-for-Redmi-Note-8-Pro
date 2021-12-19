@@ -38,7 +38,6 @@ jobs:
         run: |
           cd ~/android/pe
           repo init -u https://github.com/PixelExperience/manifest -b twelve
-          y
       - name: Start SSH via tmate
         uses: P3TERX/ssh2actions@main
         env:
