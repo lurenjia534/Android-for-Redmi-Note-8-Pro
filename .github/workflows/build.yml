@@ -1,0 +1,26 @@
+name: Redmi-Note-8-Pro
+
+on: workflow_dispatch
+
+jobs:
+  build-Openwrt:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Setup Java JDK
+        uses: actions/setup-java@v2.3.1
+        with:
+          distribution: "temurin"
+          java-version: "17"
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.4.1
+        with:
+          node-version: "16.13.0"
+      - name: Setup Python
+        uses: actions/setup-python@v2.3.1
+        with:
+          python-version: "3.8.10"
+      - name: Start SSH via tmate
+        uses: P3TERX/ssh2actions@main
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
