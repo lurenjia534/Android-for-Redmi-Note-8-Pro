@@ -33,7 +33,7 @@ jobs:
       - name: Configure git
         run: |
           git config --global user.email "3160479057qq@gmail.com"
-          git config --global user.name "Your Name"
+          git config --global user.name "lurenjia534"
       - name: Start SSH via tmate
         uses: P3TERX/ssh2actions@main
         env:
@@ -43,7 +43,7 @@ jobs:
         run: |
           cd ~/android/pe
           repo sync -j$(nproc --all) -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-      - name: 
+      - name: make build Android12
         run: |
           cd ~/android/pe
           croot
