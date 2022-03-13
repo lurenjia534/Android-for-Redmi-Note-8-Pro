@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: make build Android12
         run: |
-          cd ~/
-          cd /home/lurenjia534/Pixel-alioth
-          croot
+          source build/envsetup.sh
+          lunch aosp_alioth-userdebug
+          cd /home/lurenjia534/Pixel-alioth && croot
           mka bacon -j$(nproc --all)
