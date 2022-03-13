@@ -9,5 +9,6 @@ jobs:
       - name: make build Android12
         run: |
           cd /home/lurenjia534/Pixel-alioth
+          cd /home/lurenjia534/Pixel-alioth
           croot
           mka bacon -j$(nproc --all)
