@@ -3,14 +3,9 @@ name: Redmi-K40
 on: workflow_dispatch
 
 jobs:
-  build-Openwrt:
+  build-alioth-Android-S:
     runs-on: self-hosted
     steps:
-      - name: build  twelve .sh
-        run: |
-         cd /home/lurenjia534/Pixel-alioth
-         source build/envsetup.sh
-         lunch aosp_alioth-userdebug
       - name: make build Android12
         run: |
           cd /home/lurenjia534/Pixel-alioth
