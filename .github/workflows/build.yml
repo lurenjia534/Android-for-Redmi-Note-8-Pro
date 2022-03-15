@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: device info
         run: |
-          source /home/lurenjia534/alioth/build/envsetup.sh
+          source ~/alioth/build/envsetup.sh
           lunch aosp_alioth-userdebug
       - name: Build alioth Android 12 
         run: |
