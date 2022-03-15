@@ -14,3 +14,7 @@ jobs:
         run: |
           source /home/lurenjia534/Pixel-alioth/build/envsetup.sh
           lunch aosp_alioth-userdebug
+      - name: build clean
+        run: |
+          cd /home/lurenjia534/Pixel-alioth
+          make clean
