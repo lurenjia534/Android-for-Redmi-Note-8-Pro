@@ -8,11 +8,11 @@ jobs:
     steps:
       - name: device info
         run: |
-          source /home/lurenjia534/Pixel-alioth/build/envsetup.sh
+          source /home/lurenjia534/alioth/build/envsetup.sh
           lunch aosp_alioth-userdebug
       - name: Build alioth Android 12 
         run: |
           cd /home/lurenjia534/Pixel-alioth
-          source /home/lurenjia534/Pixel-alioth/build/envsetup.sh
+          source /home/lurenjia534/alioth/build/envsetup.sh
           croot
           mka bacon -j$(nproc --all)
