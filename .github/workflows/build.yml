@@ -6,9 +6,11 @@ jobs:
   build-alioth-Android-S:
     runs-on: self-hosted
     steps:
-      - name: make build Android12
+      - name: device info
         run: |
-          source build/envsetup.sh
+          source /home/lurenjia534/Pixel-alioth/build/envsetup.sh
           lunch aosp_alioth-userdebug
-          cd /home/lurenjia534/Pixel-alioth && croot
+      - name: Build alioth Android 12 
+          cd /home/lurenjia534/Pixel-alioth
+          croot
           mka bacon -j$(nproc --all)
