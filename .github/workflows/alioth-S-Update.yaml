@@ -12,7 +12,7 @@ jobs:
           repo sync
       - name: Update alioth 
         run: |
-          source /home/lurenjia534/alioth/buildenvsetup.sh
+          source /home/lurenjia534/alioth/build/envsetup.sh
           lunch aosp_alioth-userdebug
       - name: build clean
         run: |
