@@ -1,0 +1,13 @@
+name: Server SSH
+
+on: workflow_dispatch
+
+jobs:
+  Server-SSH:
+    runs-on: self-hosted
+    steps:
+      - name: Server-SSH
+        uses: P3TERX/ssh2actions@main
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
