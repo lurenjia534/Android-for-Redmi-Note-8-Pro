@@ -8,13 +8,13 @@ jobs:
     steps:
       - name: Update repo sync
         run: |
-          cd /home/lurenjia534/alioth
+          cd ~/alioth
           repo sync
       - name: Update alioth 
         run: |
-          source /home/lurenjia534/alioth/build/envsetup.sh
+          source ~/alioth/build/envsetup.sh
           lunch aosp_alioth-userdebug
       - name: build clean
         run: |
-          cd /home/lurenjia534/alioth
+          cd ~/alioth
           make clean
