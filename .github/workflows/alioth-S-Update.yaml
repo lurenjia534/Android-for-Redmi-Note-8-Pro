@@ -6,11 +6,7 @@ jobs:
   build-alioth-Android-S:
     runs-on: self-hosted
     steps:
-      - name: Update repo sync
-        run: |
-          cd /home/lurenjia534/Pixel-alioth
-          repo sync
       - name: Update alioth 
         run: |
-          source build/envsetup.sh
+          source /home/lurenjia534/Pixel-alioth/build/envsetup.sh
           lunch aosp_alioth-userdebug
