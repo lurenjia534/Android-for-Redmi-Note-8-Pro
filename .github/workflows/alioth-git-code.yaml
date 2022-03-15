@@ -1,0 +1,22 @@
+name: alioth-S-Update
+
+on: workflow_dispatch
+
+jobs:
+  git-alioth-Android-S:
+    runs-on: self-hosted
+    steps:
+      - name: mkdir file
+        run: |
+          mkdir -p ~/alioth
+          cd ~/alioth
+          repo init -u https://github.com/PixelExperience/manifest -b twelve
+      - name: Git code
+        run: |
+          cd ~/alioth
+          repo sync -j$(nproc --all) -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+      - name: Update alioth 
+        run: |
+          cd ~/alioth
+          source /home/lurenjia534/Pixel-alioth/build/envsetup.sh
+          lunch aosp_alioth-userdebug
